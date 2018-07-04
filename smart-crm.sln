@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "smart-crm.web", "smart-crm\smart-crm.web.csproj", "{91B7EB69-475D-4231-9B5D-B6C9FEF6ADCB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B3756087-608E-4CB4-8805-48875B037E1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "smart-crm.core", "smart-crm.core\smart-crm.core.csproj", "{CAFB3558-730E-4C40-ACBD-41EB63FC83F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "smart-crm.Infrastructure", "smart-crm.Infrastructure\smart-crm.Infrastructure.csproj", "{0857E63B-760E-42D3-A7EE-2332DAB50E12}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91B7EB69-475D-4231-9B5D-B6C9FEF6ADCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91B7EB69-475D-4231-9B5D-B6C9FEF6ADCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91B7EB69-475D-4231-9B5D-B6C9FEF6ADCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91B7EB69-475D-4231-9B5D-B6C9FEF6ADCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAFB3558-730E-4C40-ACBD-41EB63FC83F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAFB3558-730E-4C40-ACBD-41EB63FC83F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAFB3558-730E-4C40-ACBD-41EB63FC83F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAFB3558-730E-4C40-ACBD-41EB63FC83F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0857E63B-760E-42D3-A7EE-2332DAB50E12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0857E63B-760E-42D3-A7EE-2332DAB50E12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0857E63B-760E-42D3-A7EE-2332DAB50E12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0857E63B-760E-42D3-A7EE-2332DAB50E12}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{91B7EB69-475D-4231-9B5D-B6C9FEF6ADCB} = {B3756087-608E-4CB4-8805-48875B037E1B}
+		{CAFB3558-730E-4C40-ACBD-41EB63FC83F1} = {B3756087-608E-4CB4-8805-48875B037E1B}
+		{0857E63B-760E-42D3-A7EE-2332DAB50E12} = {B3756087-608E-4CB4-8805-48875B037E1B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F188771D-A057-4979-BC60-DFA3E8C0495F}
+	EndGlobalSection
+EndGlobal
