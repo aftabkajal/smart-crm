@@ -86,6 +86,7 @@
     <Compile Include="Entities\ApplicationUser.cs" />
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Product.cs" />
+    <Compile Include="Entities\Roles.cs" />
     <Compile Include="Entities\SupportDepartment.cs" />
     <Compile Include="Interfaces\IAsyncRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
