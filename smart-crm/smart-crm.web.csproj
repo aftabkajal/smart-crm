@@ -212,6 +212,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -284,6 +285,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Base\" />
+    <Folder Include="Views\Role\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -299,6 +301,10 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\smart-crm.core\smart-crm.core.csproj">
+      <Project>{CAFB3558-730E-4C40-ACBD-41EB63FC83F1}</Project>
+      <Name>smart-crm.core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\smart-crm.Infrastructure\smart-crm.Infrastructure.csproj">
       <Project>{0857e63b-760e-42d3-a7ee-2332dab50e12}</Project>
       <Name>smart-crm.Infrastructure</Name>

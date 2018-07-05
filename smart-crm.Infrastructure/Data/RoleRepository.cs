@@ -20,5 +20,14 @@ namespace smart_crm.Infrastructure.Data
             _dbContext.Roles.Add(Role);
            await _dbContext.SaveChangesAsync();
         }
+
+        public List<IdentityRole> ListAllRole()
+        {
+            return _dbContext.Roles.ToList();
+        }
+        public ApplicationDbContext Context()
+        {
+            return new ApplicationDbContext();
+        }
     }
 }
