@@ -16,5 +16,11 @@ namespace smart_crm.core.Entities
         [ForeignKey("Product")]
         public string ProductId { get; set; }
         public virtual Product Product { get; set; }
+
+        public decimal Quantity { get; set; }
+
+        public decimal ItemPrice { get; set; }
+        public decimal TotalPrice { get; set; }
+        public bool SendInvoice { get; set; }
     }
 }
