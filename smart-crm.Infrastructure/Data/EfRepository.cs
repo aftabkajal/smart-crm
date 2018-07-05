@@ -1,6 +1,5 @@
 ﻿using smart_crm.core.Interfaces;
 using smart_crm.core.SharedKernel;
-using smart_crm.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -17,6 +16,10 @@ namespace smart_crm.Infrastructure.Data
         public EfRepository(ApplicationDbContext dbContext)
         {
             this._dbContext = dbContext;
+        }
+        public EfRepository()
+        {
+            this._dbContext = new ApplicationDbContext();
         }
 
         public async Task<T> AddAsync(T entity)
