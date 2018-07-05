@@ -83,10 +83,16 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Account.cs" />
     <Compile Include="Entities\ApplicationUser.cs" />
     <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\EmailTemplates.cs" />
+    <Compile Include="Entities\Expense.cs" />
+    <Compile Include="Entities\NewIncome.cs" />
+    <Compile Include="Entities\PaymentSettings.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\Roles.cs" />
+    <Compile Include="Entities\Settings.cs" />
     <Compile Include="Entities\SupportDepartment.cs" />
     <Compile Include="Interfaces\IAsyncRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
