@@ -83,12 +83,17 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Client.cs" />
     <Compile Include="Entities\Account.cs" />
     <Compile Include="Entities\ApplicationUser.cs" />
+    <Compile Include="Entities\BalanceTransfer.cs" />
     <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\ClientGroup.cs" />
     <Compile Include="Entities\EmailTemplates.cs" />
     <Compile Include="Entities\Expense.cs" />
     <Compile Include="Entities\NewIncome.cs" />
+    <Compile Include="Entities\Notice.cs" />
+    <Compile Include="Entities\Order.cs" />
     <Compile Include="Entities\PaymentSettings.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\Roles.cs" />
