@@ -5,6 +5,8 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
+using smart_crm.core.Entities;
+using smart_crm.Infrastructure.Data;
 using smart_crm.Models;
 
 namespace smart_crm
