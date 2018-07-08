@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using smart_crm.core.Entities;
 using smart_crm.Models;
 
 namespace smart_crm.Controllers

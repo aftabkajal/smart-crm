@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using System.Web;
 
@@ -11,45 +12,43 @@ namespace smart_crm.Infrastructure.Data
 {
     public class EfRepository<T> : IAsyncRepository<T> where T : Entity
     {
-        private readonly ApplicationDbContext _dbContext;
+        private DbContext _dbContext;
+        private DbSet<T> _targetTable;
 
-        public EfRepository(ApplicationDbContext dbContext)
+        protected EfRepository(DbContext dbContext)
         {
             this._dbContext = dbContext;
-        }
-        public EfRepository()
-        {
-            this._dbContext = new ApplicationDbContext();
+            this._targetTable = _dbContext.Set<T>();
         }
 
-        public async Task<T> AddAsync(T entity)
+        public bool Create(T entity)
         {
-            _dbContext.Set<T>().Add(entity);
-            await _dbContext.SaveChangesAsync();
-            return entity;
+            _targetTable.Add(entity);
+            return _dbContext.SaveChanges() > 0;
         }
 
-        public async Task DeleteAsync(T entity)
+        public ICollection<T> ListAll()
         {
-            _dbContext.Set<T>().Remove(entity);
-            await _dbContext.SaveChangesAsync();
+            return _targetTable.ToList();
+        }
+        public T GetByIdAsync(Expression<Func<T, bool>> condition)
+        {
+            return (T)_targetTable.FirstOrDefault(condition);
         }
 
-        public async Task<T> GetByIdAsync(int id)
+        public bool Update(T entity)
         {
-
-            return await _dbContext.Set<T>().SingleOrDefaultAsync(m => m.Id == id);
-        }
-
-        public async Task<List<T>> ListAllAsync()
-        {
-            return await _dbContext.Set<T>().ToListAsync();
-        }
-
-        public async Task UpdateAsync(T entity)
-        {
+            _targetTable.Attach(entity);
             _dbContext.Entry(entity).State = EntityState.Modified;
-            await _dbContext.SaveChangesAsync();
+            return _dbContext.SaveChanges() > 0;
         }
+
+        public bool Delete(T entity)
+        {
+            _targetTable.Remove(entity);
+            return _dbContext.SaveChanges() > 0;
+        }
+
+
     }
 }
