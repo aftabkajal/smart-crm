@@ -6,8 +6,11 @@ using System.Web;
 
 namespace smart_crm.core.Entities
 {
-    public class PaymentSettings :Entity
+    public class Payment :Entity
     {
         public string Name { get; set; }
+        public string Setting { get; set; }
+        public string Value { get; set; }
+        public int Status { get; set; }
     }
 }

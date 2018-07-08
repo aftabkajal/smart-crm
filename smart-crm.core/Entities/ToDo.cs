@@ -6,8 +6,9 @@ using System.Web;
 
 namespace smart_crm.core.Entities
 {
-    public class ClientGroup:Entity
+    public class ToDo:Entity
     {
-        public string GroupName { get; set; }
+        public String Title { get; set; }
+        public int Active { get; set; }
     }
 }
